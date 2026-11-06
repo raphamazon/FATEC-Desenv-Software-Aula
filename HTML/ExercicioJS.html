@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício JS (Repetição e Condicional)</title>
+</head>
+<body>
+    <script>
+        const notasTurmas = [8.5, 4.0, 11.5, 9.2, -1.0, 6.5, 7.0, 5.5];
+
+        var reprovado = 0;
+        var aprovado = 0;
+        for (let i=0; i < notasTurmas.length; i++) {
+            //console.log(`${i}: ${notasTurmas[i]}`);
+        
+            if (notasTurmas[i] < 0 || notasTurmas[i] > 10) {
+                console.log(`${notasTurmas[i]} é inválido!`);
+            }
+            else if (notasTurmas[i] < 6) {
+                console.log(`${notasTurmas[i]}: Em Recuperação (Conceito D)`);
+                reprovado++;
+            }
+            else if (notasTurmas[i] >= 6 && notasTurmas[i] < 7) {
+                console.log(`${notasTurmas[i]}: Aprovado / Regular (Conceito C)`);
+                aprovado++;
+            }
+            else if (notasTurmas[i] >= 7 && notasTurmas[i] < 9) {
+                console.log(`${notasTurmas[i]}: Desempenho Bom (Conceito B)`);
+                aprovado++;
+            }
+            else {
+                console.log(`${notasTurmas[i]}: Desempenho Excelente (Conceito A)`);
+                aprovado++;
+            }
+        }
+        console.log(`${aprovado}: Aprovado`);
+        console.log(`${reprovado}: Reprovado`);
+    </script>
+    
+</body>
+</html>
