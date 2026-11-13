@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Lista com Script</title>
+</head>
+<body>
+    <form>
+        <label for="tarefa">Tarefa</label>
+        <input type="text" name="tarefa" id="tarefa">
+
+        <button type="button" id="botao">Adicionar</button>   
+    </form>
+
+    <ul id="lista">
+        
+    </ul>
+
+    <script>
+
+        var botao = document.getElementById("botao");
+
+        botao.addEventListener("click", function() {
+        let tarefa = document.getElementById("tarefa").value;
+        
+        let lista = document.getElementById("lista");
+        let linhalista = document.createElement("li");
+      
+        linhalista.textContent = tarefa;
+      
+        lista.appendChild(linhalista);
+
+        });
+
+    </script>
+    
+</body>
+</html>
